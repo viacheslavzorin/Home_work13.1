@@ -35,10 +35,15 @@ class Item:
         with open('items.csv') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                __product = row['name']
-                price = int(row['price'])
-                quanity = int(row['quantity'])
-                results.append(cls(__product, quanity, price))
+                 __product = row['name']
+                 price = cls.is_integer(int(row['price']))
+                 quanity = cls.is_integer(int(row['quantity']))
+            results.append(cls(__product, quanity, price))
+
+                #__product = row['name']
+                #price = int(row['price'])
+                #quanity = int(row['quantity'])
+                #results.append(cls(__product, quanity, price))
         return results
     @staticmethod
     def is_integer(number):

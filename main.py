@@ -28,6 +28,8 @@ item = Item('Телефон', 10000, 5)
 #item.name = 'СуперСмартфон'
 item.long_name ='Смартфон'
 print(item.long_name)
+#item.product = 'sss'
+#print(item.product)
 print(item._Item__product)
 item.long_name = 'СуперСмартфон'
 print(Item.is_integer(5))
