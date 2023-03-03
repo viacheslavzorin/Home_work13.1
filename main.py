@@ -15,30 +15,18 @@ print(Item.instances)
 
 Item.instantiate_from_csv()  # создание объектов из данных файла
 
-#print(len(Item.instances))
 print(len(Item.instantiate_from_csv()))
 item1 = Item.instantiate_from_csv()[0]
-#item3 = Item.instantiate_from_csv()[1]
+
 print(item1._Item__product)
-#print(item3.product)
 
 item = Item('Телефон', 10000, 5)
-#item.name = 'Смартфон'
-#print(item.name)
-#item.name = 'СуперСмартфон'
-item.long_name ='Смартфон'
+
+item.long_name = 'Смартфон'
 print(item.long_name)
-#item.product = 'sss'
-#print(item.product)
+
 print(item._Item__product)
 item.long_name = 'СуперСмартфон'
 print(Item.is_integer(5))
 print(Item.is_integer(5.0))
 print(Item.is_integer(5.5))
-
-
-
-
-
-
-
